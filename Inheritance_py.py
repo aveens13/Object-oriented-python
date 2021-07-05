@@ -38,9 +38,7 @@ class Programmer(Employees):
     no_of_holidays = 11
 
     def __init__(self, aname, asalary, arole, alanguages):
-        self.name = aname
-        self.salary = asalary
-        self.role = arole
+        Employees.__init__(self, aname, asalary, arole)#you have inherited the Employees class in this subclass so i think you need not to time and again set all the attributes to an instance when you already had it done in Parent Class
         self.languages = alanguages
 
         """
